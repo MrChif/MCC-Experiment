@@ -17,10 +17,6 @@ def select_random(teams_n,teams_h,teams_c):
     chosen_list = [teams_n[n_random],teams_h[h_random],teams_c[c_random]]
     #print(chosen_list)
     return random.choices(chosen_list,weights=(80,10,10))
-    
-def name_to_string(name):
-    string = ''
-    string.join(name)
 
 #main function from this file
 def select_random_team_name():
@@ -28,7 +24,7 @@ def select_random_team_name():
     teams_h = read_txt_file('name_of_teams_halloween.txt')
     teams_c = read_txt_file('name_of_teams_christmas.txt')
     selected_name = select_random(teams_n,teams_h,teams_c)
-    name_to_string(selected_name)
     return selected_name
 
-
+#test  = select_random_team_name()
+#print(test)
